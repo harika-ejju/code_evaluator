@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(135deg, #0a0e27 0%, #1a1b3a 50%, #0f0f23 100%);
+  --foreground: #e2e8f0;
+  --primary: #00ffff;
+  --secondary: #ff00ff;
+  --accent: #00ff88;
+  --navy: #0f172a;
+  --dark-navy: #020617;
+  --neon-blue: #00d4ff;
+  --neon-purple: #a855f7;
+  --neon-green: #00ff88;
+  --neon-pink: #ff0080;
+}
+
+body {
+  background: var(--navy);
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+  color: var(--foreground);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 
+    0 0 5px var(--neon-blue),
+    0 0 10px var(--neon-blue),
+    0 0 15px var(--neon-blue),
+    0 0 20px var(--neon-blue);
+}
+
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 
+    0 0 5px var(--neon-blue),
+    0 0 10px var(--neon-blue),
+    0 0 15px var(--neon-blue);
+}
+
+.neon-border {
+  border: 1px solid var(--neon-blue);
+  box-shadow: 
+    0 0 5px var(--neon-blue),
+    inset 0 0 5px var(--neon-blue);
+}
+
+/* Custom scrollbar with neon theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-navy);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
